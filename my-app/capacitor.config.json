@@ -1,0 +1,10 @@
+{
+  "appId": "com.example.cap_npm_workspace",
+  "appName": "NPM Workspace Example",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
