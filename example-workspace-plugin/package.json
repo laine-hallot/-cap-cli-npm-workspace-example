@@ -1,5 +1,5 @@
 {
-  "name": "example-workspace-plugin",
+  "name": "@korterra/example-workspace-plugin",
   "version": "0.0.1",
   "description": "Example plugin meant to demonstrate using npm workspaces with Capacitor CLI",
   "main": "dist/plugin.cjs.js",
