@@ -1,5 +1,5 @@
 {
-  "name": "cap-cli-npm-workspace-example",
+  "name": "@korterra/cap-cli-npm-workspace-example",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,14 @@
     "my-app/",
     "example-workspace-plugin/"
   ],
+  "devDependencies": {
+    "@capacitor/cli": "../capacitor/cli"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "degit": "^2.8.4"
+  }
 }
