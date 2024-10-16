@@ -1,5 +1,6 @@
 import { SplashScreen } from '@capacitor/splash-screen';
 import { Camera } from '@capacitor/camera';
+import { ExampleWorkspacePlugin } from "@korterra/example-workspace-plugin";
 
 window.customElements.define(
   'capacitor-welcome',
@@ -60,6 +61,13 @@ window.customElements.define(
         <h1>Capacitor</h1>
       </capacitor-welcome-titlebar>
       <main>
+        <div>
+          <p id="echo-message"></p>
+          <label for="echo-input">Type some stuff in here:</label>
+          <input type="text" id="echo-input"/>
+          <p>Heres a button that runs plugin code from a workspace package</p>
+          <button id="workspace-code-button" class="button">I have workspace code. Press me :3 </button>
+        </div>
         <p>
           Capacitor makes it easy to build powerful apps for the app stores, mobile web (Progressive Web Apps), and desktop, all
           with a single code base.
@@ -91,6 +99,14 @@ window.customElements.define(
 
     connectedCallback() {
       const self = this;
+      const echoInput = self.shadowRoot.querySelector('#echo-input');
+      const echoOutput = self.shadowRoot.querySelector('#echo-message');
+
+      self.shadowRoot.querySelector('#workspace-code-button').addEventListener('click', async function(e) {
+        const inputValue = echoInput.value; 
+        const {value: msg} = await ExampleWorkspacePlugin.echo({value: inputValue});
+        echoOutput.innerText = msg;
+      });
 
       self.shadowRoot.querySelector('#take-photo').addEventListener('click', async function (e) {
         try {
