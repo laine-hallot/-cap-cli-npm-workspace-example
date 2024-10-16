@@ -10,13 +10,10 @@
     "example-workspace-plugin/"
   ],
   "devDependencies": {
-    "@capacitor/cli": "../capacitor/cli"
+    "@capacitor/cli": "github:laine-hallot/capacitor#2481d5808e5bb64b5a7ad833458e5d03b74ea161"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "degit": "^2.8.4"
-  }
+  "description": ""
 }
